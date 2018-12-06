@@ -1,0 +1,16 @@
+
+.card-footer {
+    padding: 0;
+    
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+
+.image {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+}

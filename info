@@ -1,0 +1,6 @@
+App is als volgt opgebouwt:
+    bootstrap 4 intaleren, ng-bootstrap instaleren voor dropdown.
+    topnav is gecopieerd van bootstrap.com
+    app is gescheven voor firebase
+    npm install firebase angularfire2 --save
+    npm install --save rxjs-compat 

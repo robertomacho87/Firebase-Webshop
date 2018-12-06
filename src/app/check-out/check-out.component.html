@@ -1,0 +1,49 @@
+
+<h1>Shipping</h1>
+
+<div class="row">
+  <div class="col-md-6">
+      <form #f="ngForm" (ngSubmit)="placeOrder(f.value)">
+          <div class="form-group">
+            <label for="title">Name</label>
+            <input name="name" id="name" #name="ngModel" type="text" class="form-control" required ngModel="name">
+            <div *ngIf="(name.touched || name.dirty ) && name.invalid" class="alert alert-danger">
+                Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address1">Address</label>
+            
+            <input #address1="ngModel" ngModel="line 1" name="address1" id="address1" type="text" class="form-control" required>
+            <br>
+            <br>
+            <input #address2="ngModel" ngModel="line 2" name="address2" id="address2" type="text" class="form-control" required>
+            
+            <div *ngIf="(address1.touched || address1.dirty || address2.touched || address2.dirty ) && (address1.invalid || address2.invalid)" class="alert alert-danger">
+              <div *ngIf="address1.errors.required">Adress is required.</div>
+            </div>
+          </div>
+
+          <!-- <div class="form-group">
+            <input #address2="ngModel" ngModel name="address2" id="address2" type="text" class="form-control" required>
+            <div *ngIf="(address2.touched || address2.dirty ) && address2.invalid" class="alert alert-danger">
+              <div *ngIf="address2.errors.required">Adress is required.</div>
+            </div>
+          </div> -->
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input #city="ngModel" ngModel="city" name="city" id="city" class="form-control" required>
+            <div *ngIf="(city.touched || city.dirty ) && city.invalid" class="alert alert-danger">
+                City is required.
+            </div>
+          </div>
+          
+          <button class="btn btn-primary">Place Order</button>
+          <!-- <button type="button" class="btn btn-danger" (click)="delete()">Delete</button> -->
+        </form>
+  </div>
+</div>
+
+
